@@ -58,8 +58,8 @@ sizes = cat(1, sizes,[ph pv]);
 correlations = normxcorr2(pattern_h, full_image);
 
 %find maximum of correlation   
-[r c v] = find(correlations == (max(max(correlations))));
-found_matches = cat(1, found_matches,[r c v]); 
+[u v c] = find(correlations == (max(max(correlations))));
+found_matches = cat(1, found_matches,[u v c]); 
 
 %% Scale pattern and match
 for i = 1:1:40
@@ -71,8 +71,8 @@ for i = 1:1:40
     
     %find maximum of correlation
     
-    [r c v] = find(correlations == (max(max(correlations))));
-    found_matches = cat(1, found_matches,[r c v]);
+    [u v c] = find(correlations == (max(max(correlations))));
+    found_matches = cat(1, found_matches,[u v c]);
 end
 
 %% Rotate pattern to pattern_v
@@ -97,8 +97,8 @@ for i = 1:1:40
     
     %find maximum of correlation
     
-    [r c v] = find(correlations == (max(max(correlations))));
-    found_matches = cat(1, found_matches,[r c v]); 
+    [u v c] = find(correlations == (max(max(correlations))));
+    found_matches = cat(1, found_matches,[u v c]); 
 end
 
 
