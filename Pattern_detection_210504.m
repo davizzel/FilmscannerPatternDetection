@@ -62,7 +62,7 @@ correlations = normxcorr2(pattern_h, full_image);
 found_matches = cat(1, found_matches,[u v c]); 
 
 %% Scale pattern and match
-for i = 1:1:40
+for ii = 1:1:40
     
     pattern_h = imresize(pattern_h, 0.5^(1/6));
     [ph pv] = size(pattern_h);
@@ -88,7 +88,7 @@ correlations = normxcorr2(pattern_v, full_image);
 found_matches = cat(1, found_matches,[u v c]);
 
 %% Scale pattern and match
-for i = 1:1:40
+for ii = 1:1:40
     
     pattern_v = imresize(pattern_v, 0.5^(1/6));
     [ph pv] = size(pattern_v);
